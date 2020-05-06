@@ -11,108 +11,44 @@ import matplotlib.pyplot as plt
 # ## Cargando dataset limpio
 
 # %%
-data_file="../data/intermediate/forest-limpio.csv"
-data = pd.read_csv(data_file)
+data_file="../data/intermediate/forest-limpio.pkl"
+data_origen = pd.read_pickle(data_file)
 data.shape 
-
-
-# %% [markdown]
-# ## Visualizando variables a normalizar
-# Las variables con la menor cantidad de valores unicos, son candidatas
-# a dejarlas como clasificadoras, en este caso es el tipo y el publico.
-
-# %%
-def valores_unicos(dataframe):
-    for column in dataframe:
-        nombre_col = dataframe[column].name
-        unicos_col = len(dataframe[column].unique())
-        tipo_col = dataframe[column].dtype
-        print("columna {}".format(nombre_col),
-            "valores unicos {}".format(unicos_col),
-            "tipo {}".format(tipo_col),
-            sep="\t") 
-valores_unicos(data)
-
-# %% [markdown]
-# ## Variables categoricas identificadas
-# Según el resultado, las variables categoricas que se encuentran en el dataframe corresponden a:
-# Cover_Type
-# Wilderness_Area
-# Soil_Type
-
 
 
 # %% [markdown]
 # ### Wildernes_Area
 # Corresponde a las áreas silvestres con menos perturbaciones realizadas por el hombre, la covertura es natural y no posee intervenciones forestales.
-# Posee valores numéricos comprendidos entre 1 y 4
 
 # %%
-data.loc[data["Wilderness_Area"]=="Wilderness1", "Wilderness_Area"]=1
-data.loc[data["Wilderness_Area"]=="Wilderness2", "Wilderness_Area"]=2
-data.loc[data["Wilderness_Area"]=="Wilderness3", "Wilderness_Area"]=3
-data.loc[data["Wilderness_Area"]=="Wilderness4", "Wilderness_Area"]=4
-data["Wilderness_Area"] = data["Wilderness_Area"].astype("category")
-data["Wilderness_Area"].value_counts()
+df_temp = data[["Wilderness_Area1", "Wilderness_Area2", "Wilderness_Area3", "Wilderness_Area4"]]
+x = df_temp.stack() 
+var = pd.Series(pd.Categorical(x[x!=0].index.get_level_values(1)))
+df_temp = pd.concat([df_temp, var], axis=1)
+df_temp.columns=["Wilderness_Area1", "Wilderness_Area2", "Wilderness_Area3", "Wilderness_Area4", "Wilderness_Area"]
+df_temp.drop(["Wilderness_Area1", "Wilderness_Area2", "Wilderness_Area3", "Wilderness_Area4"], axis=1, inplace=True)
+df_temp
+
+# %% [markdown]
+# La distribución de las áreas silvestres corresponde a:
 
 # %%
+df_temp["Wilderness_Area"].value_counts()
+
+# %% 
 %matplotlib inline 
-df_wilderness = data.groupby(data["Wilderness_Area"])["Wilderness_Area"].count().plot(kind="barh", legend="Reverse")
-plt.title("Distribución de áreas salvajes")
-plt.ylabel("Tipo de area silvestre")
-plt.xlabel("Nro. ocurrencias")
+df_temp.groupby("Wilderness_Area")["Wilderness_Area"].count().plot(kind="barh", legend="Reverse")
+plt.xlabel("Nro. de ocurrencias")
+plt.ylabel("Tipo de área silvestre")
 plt.show()
 
-# %% [markdown]
-# El gráfico muestra la distribución de las áreas silvestres y la cantidad obtenida es igual al total de instancias observadas, por lo cual esta variable categórica es normalizada correctamente.
-
-
-
-# %% [markdown]
-# ### Cover_Type
-# Es el tipo de covertura del bosque, posee valores numéricos con valores desde 1 hasta 7
+# %% 
+# transformando la columna "Wilderness_Area" a int.
+df_temp["Wilderness_Area"] = df_temp["Wilderness_Area"].str.replace("Wilderness_Area","") 
+df_temp["Wilderness_Area"].value_counts()
 
 # %%
-data["Cover_Type"] = data["Cover_Type"].astype("category")
-data["Cover_Type"].value_counts()
-
-# %%
-%matplotlib inline 
-df_cover = data.groupby(data["Cover_Type"])["Cover_Type"].count().plot(kind="barh", legend="Reverse")
-plt.title("Distribución de tipos de covertura")
-plt.ylabel("Tipo de covertura")
-plt.xlabel("Nro. ocurrencias")
-plt.show()
-
-# %% [markdown]
-# La gráfica muestra que los valores estan distribuidos uniformemente en la variable covertura, la cantidad es  correcta, pero tiene diferencias sustanciales en relacion a la altura y esto puede satisfacer ciertas preguntas que en el desarrollo pueden servir para conocimiento de las especies encontradas en los bosques, por tal motivo, esta variable categórica es tomada en cuenta en el dataset.
-
-
-
-# %% [markdown]
-# ### SoilType
-# Es el tipo de suelo encontrado en el bosque y comprenden valores entre 1 y 40, según "USFS Ecological unit Landtype"
-
-# %%
-for i in range(1,40):
-    columna = "Soil"+str(i)
-    data.loc[data["Soil_Type"]==columna, "Soil_Type"]=i
-
-
-# %%
-data["Soil_Type"].value_counts()
-
-# %%
-%matplotlib inline 
-df_cover = data.groupby(data["Soil_Type"])["Soil_Type"].count().plot(kind="bar", legend="Reverse")
-plt.title("Distribución de tipos de suelo")
-plt.xlabel("Tipo de suelo")
-plt.ylabel("Nro. ocurrencias")
-plt.show()
-
-# %% [markdown]
-# Los tipos de suelo se encuentran correctamente normalizados, el único tipo de suelo que no aparece en la muestra es el tipo 15.
-
+data = pd.concat([data, df_temp], axis=1)
 
 
 # %% [markdown]
@@ -134,3 +70,6 @@ print(data_file, " almacenado.")
 
 # %% [markdown]
 # # Finalizo la transformacion del dataset de Forest
+
+
+

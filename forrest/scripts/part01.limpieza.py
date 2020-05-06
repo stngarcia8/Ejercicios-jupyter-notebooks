@@ -14,6 +14,7 @@ data = pd.read_csv(data_file)
 data.shape 
 
 
+
 # %% [markdown]
 # ## Explorando datos de forest
 data.describe()
@@ -27,93 +28,81 @@ data.info()
 data.dtypes
 
 
+
 # %% [markdown]
-Normalizando nombres de columnas
+# ## Visualizando elementos nulos
 
 # %%
-data.columns=[
-    "Id", "Elevation", "Aspect", "Slope", 
-    "H_Hydrology", "V_Hydrology", "H_Roadways", 
-    "sh_9AM", "sh_Noon", "sh_3PM", 
-    "H_Fire_Points", "Wilderness1", "Wilderness2", "Wilderness3", "Wilderness4",
-    "Soil1", "Soil2", "Soil3", "Soil4", "Soil5", "Soil6", "Soil7", "Soil8", 
-    "Soil9", "Soil10", "Soil11", "Soil12", "Soil13", "Soil14", "Soil15", "Soil16", 
-    "Soil17", "Soil18", "Soil19", "Soil20", "Soil21", "Soil22", "Soil23", "Soil24", 
-    "Soil25", "Soil26", "Soil27", "Soil28", "Soil29", "Soil30", "Soil31", "Soil32", 
-    "Soil33", "Soil34", "Soil35", "Soil36", "Soil37", "Soil38", "Soil39", "Soil40",
-    "Cover_Type"]
-data.columns
+data.isnull().sum()
+
 
 
 # %% [markdown]
-# ## normalizando columnas categoricas
+# ## Definiendo variables categoricas
+# Las variables covertura del bosque (cover_type), tipos de suelo (Soil_Type) y areas silvestres serán catalogadas como categoricas, ya que sus valores solo corresponden a 1 presente y 0 ausente.
 
 # %%
-def quitar_dummies(df, lista_cols, result_col):
-    df_temp = data[lista_cols]
-    df_temp = df_temp.set_index(["Id"])
-    x = df_temp.stack() 
-    var = pd.Series(pd.Categorical(x[x!=0].index.get_level_values(1)))
-    df_temp = pd.concat([df_temp, var], axis=1)
-    lista_cols.append(result_col)
-    df_temp.reset_index(level=0, inplace=True)
-    df_temp.columns=[lista_cols]
-    lista_cols.pop(-1)
-    df_temp.drop(lista_cols, axis=1, inplace=True)
-    return df_temp
+def convertir_categoricas(df, columnas):
+    for columna in columnas:
+        df[columna] = df[columna].astype("category")
+        print(columna, df[columna].dtype, sep="\t")
 
-
-# %% [markdown]
-# ## Tratamiento a columna wildness_area
 
 # %%
-copied_data = data.copy()
-cols=["Id", "Wilderness1", "Wilderness2", "Wilderness3", "Wilderness4"]
-df_warea = quitar_dummies(copied_data, cols, "Wilderness_Area")
-cols.pop(0)
-copied_data.drop(cols, axis=1, inplace=True)
-new_data = pd.concat([copied_data, df_warea], axis=1)
-new_data.head(15)
+lista=["Wilderness_Area1", "Wilderness_Area2", "Wilderness_Area3", "Wilderness_Area4"]
+convertir_categoricas(data, lista)
 
 
-# %% [markdown]
-# ## Tratamiento a columnas Soil_type
+
+
 
 # %%
-copied_data = new_data.copy()
-cols=["Id",
-        "Soil1", "Soil2", "Soil3", "Soil4", "Soil5", "Soil6", "Soil7", "Soil8", 
-        "Soil9", "Soil10", "Soil11", "Soil12", "Soil13", "Soil14", "Soil15", "Soil16", 
-        "Soil17", "Soil18", "Soil19", "Soil20", "Soil21", "Soil22", "Soil23", "Soil24", 
-        "Soil25", "Soil26", "Soil27", "Soil28", "Soil29", "Soil30", "Soil31", "Soil32", 
-        "Soil33", "Soil34", "Soil35", "Soil36", "Soil37", "Soil38", "Soil39", "Soil40"]
-df_warea = quitar_dummies(copied_data, cols, "Soil_Type")
-cols.pop(0)
-copied_data.drop(cols, axis=1, inplace=True)
-new_data = pd.concat([copied_data, df_warea], axis=1)
-new_data.head(15)
+lista=["Cover_Type"]
+convertir_categoricas(data, lista)
 
-
-
-# %% [markdown]
-# ## Reasignando nombres de columnas
 
 # %%
-new_data.columns=[
-    "Id", "Elevation", "Aspect", "Slope", 
-    "H_Hydrology", "V_Hydrology", "H_Roadways", 
-    "sh_9AM", "sh_Noon", "sh_3PM", 
-    "H_Fire_Points", "Cover_Type", "Wilderness_Area", "Soil_Type"]
-new_data.columns
+lista=["Soil_Type1", "Soil_Type2", "Soil_Type3", "Soil_Type4", "Soil_Type5", "Soil_Type6", "Soil_Type7", "Soil_Type8",
+"Soil_Type9", "Soil_Type10", "Soil_Type11", "Soil_Type12", "Soil_Type13", "Soil_Type14", "Soil_Type15", "Soil_Type16", 
+"Soil_Type17", "Soil_Type18", "Soil_Type19", "Soil_Type20", "Soil_Type21", "Soil_Type22", "Soil_Type23", "Soil_Type24", 
+"Soil_Type25", "Soil_Type26", "Soil_Type27", "Soil_Type28", "Soil_Type29", "Soil_Type30", "Soil_Type31", "Soil_Type32", 
+"Soil_Type33", "Soil_Type34", "Soil_Type35", "Soil_Type36", "Soil_Type37", "Soil_Type38", "Soil_Type39", "Soil_Type40"]
+convertir_categoricas(data, lista)
+
 
 
 # %% [markdown]
-# ## Grabando el dataset limpio (intermedio)
+# ## Separando variables
+# Es necesario separar los tipos de suelo, para analizar el dataframe sin tanto consumo de memoria, estas serán almacenadas en un nuevo dataframe, posteriormente podran unirse ya que mantienen el identificador de la fila a la que pertenecen.
+
+# %%
+lista.insert(0, "Id")
+df_soil = data[lista]
+df_soil.head(10)
+
+# %%
+lista.pop(0)
+data.drop(lista, axis=1, inplace=True)
+data.head()
+
+
+
+# %% [markdown]
+# ## Almacenando los dataset resultantes
 
 # %%
 data_file="../data/intermediate/forest-limpio.csv"
-new_data.to_csv(data_file, index=False)
+data.to_csv(data_file, index=False)
 print(data_file, " almacenado.")
+data_file="../data/intermediate/forest-limpio.pkl"
+data.to_pickle(data_file)
+print(data_file, " almacenado.")
+
+# %%
+data_file="../data/intermediate/forest-tipo-suelo.pkl"
+df_soil.to_pickle(data_file)
+print(data_file, " almacenado.")
+
 
 # %% [markdown]
 # # Limpieza de dataset Forest concluida.
