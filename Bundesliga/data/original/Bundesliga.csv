@@ -1,0 +1,19 @@
+ID,Equipo,PT:Puntos Totales,PJ:Partidos Jugados,PG:Partidos Ganados,PE:Partidos Empatados,PP:Partidos Perdidos,GF:Goles a favor,GC:Goles en contra,PTL:Puntos Totales,PJL:Partidos Jugados,PGL:Partidos Ganados,PEL:Partidos Empatados,PPL:Partidos Perdidos,GFL:Goles a favor,GCL:Goles en contra,PTV:Puntos Totales,PJV:Partidos Jugados,PGV:Partidos Ganados,PEV:Partidos Empatados,PPV:Partidos Perdidos,GFV:Goles a favor,GCV:Goles en contra
+1,Bayern Munich,64,28,20,4,4,81,28,32,14,10,2,2,43,13,32,14,10,2,2,38,15
+2,Borussia Dortmund,57,28,17,6,5,74,34,33,14,10,3,1,45,11,24,14,7,3,4,29,23
+3,Leipzig,55,28,15,10,3,70,29,27,14,7,6,1,35,16,28,14,8,4,2,35,13
+4,Borussia Manchengladbach,53,28,16,5,7,53,34,29,14,9,2,3,31,19,24,14,7,3,4,22,15
+5,Bayer 04 Leverkusen,53,28,16,5,7,53,36,25,14,7,4,3,26,17,28,14,9,1,4,27,19
+6,Wolfsburgo,42,28,11,9,8,40,34,18,14,4,6,4,16,15,24,14,7,3,4,24,19
+7,Schalke 04,40,28,10,10,8,34,43,21,14,5,6,3,18,21,19,14,5,4,5,16,22
+8,TSG 1899 Hoffenheim,39,28,11,6,11,39,48,19,15,6,1,8,22,35,20,13,5,5,3,17,13
+9,Friburgo,38,28,10,8,10,38,40,20,13,6,2,5,16,15,18,15,4,6,5,22,25
+10,Hertha Berlin,35,28,9,8,11,41,50,15,14,4,3,7,18,28,20,14,5,5,4,23,22
+11,Colonia,34,28,10,4,14,44,52,21,14,6,3,5,24,20,13,14,4,1,9,20,32
+12,Augsburgo,31,28,8,7,13,40,54,19,14,5,4,5,25,23,12,14,3,3,8,15,31
+13,1. FC Union Berlin,31,28,9,4,15,33,48,20,14,6,2,6,19,19,11,14,3,2,9,14,29
+14,Eintracht Frankfurt,29,27,8,5,14,44,52,22,14,6,4,4,31,22,7,13,2,1,10,13,30
+15,Mainz 05,28,28,8,4,16,37,61,14,14,4,2,8,15,26,14,14,4,2,8,22,35
+16,Fortuna DÅusseldorf,24,28,5,9,14,29,53,13,14,3,4,7,13,24,11,14,2,5,7,16,29
+17,Werder Bremen,22,27,5,7,15,29,59,6,13,1,3,9,9,30,16,14,4,4,6,20,29
+18,SC Paderborn 07,19,28,4,7,17,31,55,8,14,2,2,10,18,32,11,14,2,5,7,13,23

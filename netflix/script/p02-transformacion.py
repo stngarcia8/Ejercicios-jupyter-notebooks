@@ -182,7 +182,7 @@ data_file="../data/intermediate/netflix-categorizado.pkl"
 data.to_pickle(data_file)
 print(data_file, " almacenado.")
 data_file="../data/intermediate/netflix-categorizado.csv"
-data.to_csv(data_file, index=False, header=True)
+data.to_csv(data_file, index=False, header=True, float_format='%.2f')
 print(data_file, " almacenado.")
 
 

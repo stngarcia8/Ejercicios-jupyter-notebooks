@@ -325,7 +325,8 @@ luis[campos]
 
 # %% [markdown]
 # <p style="text-align: justify; width: 75%;">
-# No es posible encontrar datos asociados a Luis Subercaseaux, se ha buscado la información por el apellido "Subercaseaux" y el año "1896" y los filtros no arrojan resultados.
+# No es posible encontrar datos asociados a Luis Subercaseaux, se ha buscado la información por el apellido "Subercaseaux" y el año "1896" y los filtros no arrojan resultados, esta tambien disponible el filtro de equipo, pero de igual forma no es posible encontrar la información en el dataset, incluso revisando columna por columna posibles coincidencias, el registro de este atleta no existe.<br>
+# Sin embargo, la historia indica que participo de los juegos, pero al no estar en un lugar priviligiado, este no aparece en los registros.
 # </p><hr>
 
 

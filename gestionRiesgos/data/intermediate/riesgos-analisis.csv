@@ -1,0 +1,83 @@
+﻿ID,categoría,subcategoría,tipo_riesgo,objetivo_alcance,objetivo_cronograma,objetivo_costos,objetivo_calidad,tipo_impacto,probabilidad,valor_probabilidad,impacto_alcance,impacto_cronograma,impacto_costos,impacto_calidad,valor_alcance,valor_cronograma,valor_costos,valor_calidad,puntuacion_alcance,puntuacion_cronograma,puntuacion_costos,puntuacion_calidad,valoracion_global,prioridad_riesgo,proyecto
+FM-R01,Riesgo técnico,Tecnología,Amenaza,1,1,,,Directo,Baja,0.30,Bajo,Bajo,,,0.10,0.10,0.00,0.00,0.03,0.03,0.00,0.00,0.06,Moderada,Farmacia
+FM-R02,Riesgo técnico,Procesos técnicos,Amenaza,1,1,,,Directo,Media,0.50,Bajo,Bajo,,,0.10,0.10,0.00,0.00,0.05,0.05,0.00,0.00,0.10,Moderada,Farmacia
+FM-R03,Riesgo de gestión,Dotación de recursos,Oportunidad,,,1,,Directo,Baja,0.30,,,Bajo,,0.00,0.00,0.10,0.00,0.00,0.00,0.03,0.00,0.03,Baja,Farmacia
+FM-R04,Riesgo de gestión,Dotación de recursos,Oportunidad,,1,,,Indirecto,Baja,0.30,,Moderado,,,0.00,0.20,0.00,0.00,0.00,0.06,0.00,0.00,0.06,Moderada,Farmacia
+FM-R05,Riesgo técnico,Procesos técnicos,Oportunidad,1,1,1,1,Directo,Baja,0.30,Alto,Moderado,Moderado,Alto,0.40,0.20,0.20,0.40,0.12,0.06,0.06,0.12,0.36,Alta,Farmacia
+FM-R06,Riesgo técnico,Seguridad,Amenaza,,,,1,Directo,Muy baja,0.10,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.02,0.02,Baja,Farmacia
+FM-R07,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Indirecto,Muy alta,0.90,,,,Muy bajo,0.00,0.00,0.00,0.05,0.00,0.00,0.00,0.05,0.05,Baja,Farmacia
+FM-R08,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Directo,Alta,0.70,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.07,0.07,Moderada,Farmacia
+FM-R09,Riesgo comercial,Estabilidad de los clientes,Amenaza, -,,,1,Directo,Media,0.50,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.10,0.10,Moderada,Farmacia
+FM-R10,Riesgo técnico,Interfaces técnicas,Amenaza,,,,1,Directo,Baja,0.30,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.06,0.06,Moderada,Farmacia
+FM-R11,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Farmacia
+FM-R12,Riesgo técnico,Interfaces técnicas,Oportunidad,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Farmacia
+FM-R13,Riesgo técnico,Interfaces técnicas,Amenaza,,,1,1,Directo,Baja,0.30,,,Muy bajo,Bajo,0.00,0.00,0.05,0.10,0.00,0.00,0.01,0.03,0.05,Baja,Farmacia
+FM-R14,Riesgo técnico,Interfaces técnicas,Amenaza,,,1,1,Directo,Baja,0.30,,,Muy bajo,Bajo,0.00,0.00,0.05,0.10,0.00,0.00,0.01,0.03,0.05,Baja,Farmacia
+FM-R15,Riesgo técnico,Interfaces técnicas,Amenaza,,,1,1,Directo,Baja,0.30,,,Muy bajo,Bajo,0.00,0.00,0.05,0.10,0.00,0.00,0.01,0.03,0.05,Baja,Farmacia
+FM-R16,Riesgo externo,Conectividad,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Farmacia
+FM-R17,Riesgo externo,Conectividad,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Farmacia
+FM-R18,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Farmacia
+FM-R19,Riesgo comercial,Términos y condiciones contractuales,Oportunidad,,,,1,Indirecto,Media,0.50,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.20,0.20,Alta,Farmacia
+FM-R20,Riesgo comercial,Estabilidad de los clientes,Oportunidad,,,,1,Directo,Baja,0.30,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.03,0.03,Baja,Farmacia
+IN-R01,Riesgo de gestión,Dirección de proyecto,Amenaza,1,1,1,1,Directo,Baja,0.30,Moderado,Alto,Bajo,Bajo,0.20,0.40,0.10,0.10,0.06,0.12,0.03,0.03,0.12,Moderada,Intranet
+IN-R02,Riesgo técnico,Rendimiento y fiabilidad,Oportunidad,,,,1,Indirecto,Media,0.50,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.05,0.01,Baja,Intranet
+IN-R03,Riesgo técnico,Tecnología,Oportunidad,1,1,1,1,Directo,Alta,0.70,Moderado,Bajo,Bajo,Moderado,0.20,0.10,0.10,0.20,0.14,0.07,0.07,0.14,0.17,Moderada,Intranet
+IN-R04,Riesgo de gestión,Dotación de recursos,Amenaza,1,,1,,Directo,Baja,0.30,Moderado,,Alto,,0.20,0.00,0.40,0.00,0.06,0.00,0.12,0.00,0.13,Moderada,Intranet
+IN-R05,Riesgo técnico,Rendimiento y fiabilidad,Amenaza,,,,1,Indirecto,Media,0.50,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.10,0.02,Baja,Intranet
+IN-R06,Riesgo de gestión,Dotación de recursos,Oportunidad,,1,1,1,Directo,Media,0.50,,Moderado,Bajo,Moderado,0.00,0.20,0.10,0.20,0.00,0.10,0.05,0.10,0.13,Moderada,Intranet
+IN-R07,Riesgo técnico,Clasificación de roles,Amenaza,1,1,,1,Directo,Alta,0.70,Bajo,Bajo,,Alto,0.10,0.10,0.00,0.40,0.07,0.07,0.00,0.28,0.11,Moderada,Intranet
+IN-R08,Riesgo técnico,Interfaces técnicas,Oportunidad,,,,1,Directo,Alta,0.70,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.07,0.01,Baja,Intranet
+IN-R09,Riesgo de gestión,Dotación de recursos,Oportunidad,1,1,1,,Directo,Alta,0.70,Muy bajo,Bajo,Muy bajo,,0.05,0.10,0.05,0.00,0.03,0.07,0.03,0.00,0.08,Moderada,Intranet
+IN-R10,Riesgo de gestión,Capacitación,Oportunidad,1,1,1,1,Directo,Media,0.50,Moderado,Moderado,Bajo,Alto,0.20,0.20,0.10,0.40,0.10,0.10,0.05,0.20,0.17,Moderada,Intranet
+IN-R11,Riesgo técnico,Rendimiento y fiabilidad,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.28,0.06,Moderada,Intranet
+IN-R12,Riesgo de gestión,Organización,Amenaza,,,1,1,Directo,Media,0.50,,,Alto,Muy alto,0.00,0.00,0.40,0.80,0.00,0.00,0.20,0.40,0.28,Alta,Intranet
+IN-R13,Riesgo técnico,Rendimiento y fiabilidad,Amenaza,1,1,1,1,Directo,Alta,0.70,Bajo,Moderado,Bajo,Moderado,0.10,0.20,0.10,0.20,0.07,0.14,0.07,0.14,0.20,Alta,Intranet
+IN-R14,Riesgo de gestión,Organización,Oportunidad,,1,,1,Directo,Baja,0.30,,Bajo,,Bajo,0.00,0.10,0.00,0.10,0.00,0.03,0.00,0.03,0.02,Baja,Intranet
+IN-R15,Riesgo técnico,Seguridad,Amenaza,,,,1,Directo,Alta,0.70,,,,Muy bajo,0.00,0.00,0.00,0.05,0.00,0.00,0.00,0.03,0.01,Baja,Intranet
+TM-R01,Riesgo de gestión,Gestión de las operaciones,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.14,Moderada,Telemedicina
+TM-R02,Riesgo de gestión,Dotación de recursos,Oportunidad,,,,1,Indirecto,Media,0.50,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.10,0.10,Moderada,Telemedicina
+TM-R03,Riesgo de gestión,Comunicación,Oportunidad,1,,,1,Indirecto,Alta,0.70,Bajo,,,Moderado,0.10,0.00,0.00,0.20,0.07,0.00,0.00,0.14,0.15,Moderada,Telemedicina
+TM-R04,Riesgo técnico,Tecnología,Amenaza,1,1,1,1,Indirecto,Alta,0.70,Moderado,Bajo,Muy bajo,Bajo,0.20,0.10,0.05,0.10,0.14,0.07,0.03,0.07,0.14,Moderada,Telemedicina
+TM-R05,Riesgo técnico,Tecnología,Amenaza,1,1,1,1,Directo,Baja,0.30,Alto,Moderado,Bajo,Alto,0.40,0.20,0.10,0.40,0.12,0.06,0.03,0.12,0.18,Alta,Telemedicina
+TM-R06,Riesgo técnico,Procesos técnicos,Amenaza,1,1,1,1,Indirecto,Baja,0.30,Bajo,Muy bajo,Muy bajo,Moderado,0.10,0.05,0.05,0.20,0.03,0.01,0.01,0.06,0.08,Moderada,Telemedicina
+TM-R07,Riesgo técnico,Tecnología,Amenaza,1,1,1,,Directo,Baja,0.30,Alto,Moderado,Moderado,,0.40,0.20,0.20,0.00,0.12,0.06,0.06,0.00,0.07,Moderada,Telemedicina
+TM-R08,Riesgo técnico,Tecnología,Amenaza,1,,,1,Indirecto,Baja,0.30,Alto,,,Alto,0.40,0.00,0.00,0.40,0.12,0.00,0.00,0.12,0.14,Moderada,Telemedicina
+TM-R09,Riesgo técnico,Procesos técnicos,Oportunidad,1,1,,,Indirecto,Baja,0.30,Alto,Bajo,,,0.40,0.10,0.00,0.00,0.12,0.03,0.00,0.00,0.04,Baja,Telemedicina
+TM-R10,Riesgo técnico,Definición de los requisitos,Amenaza,1,,,1,Indirecto,Alta,0.70,Moderado,,,Moderado,0.20,0.00,0.00,0.20,0.14,0.00,0.00,0.14,0.17,Moderada,Telemedicina
+VS-R01,Riesgo de gestión,Dirección de proyectos,Amenaza,1,1,1,,Directo,Baja,0.30,Alto,Alto,Alto,,0.40,0.40,0.40,0.00,0.12,0.12,0.12,0.00,0.30,Alta,Vida sana
+VS-R02,Riesgo de gestión,Comunicación,Amenaza,1,1,1,1,Directo,Baja,0.30,Alto,Moderado,Bajo,Bajo,0.40,0.20,0.10,0.10,0.12,0.06,0.03,0.03,0.21,Alta,Vida sana
+VS-R03,Riesgo de gestión,Dotación de recursos,Amenaza,1,1,1,1,Directo,Media,0.50,Alto,Alto,Moderado,Moderado,0.40,0.40,0.20,0.20,0.20,0.20,0.10,0.10,0.50,Alta,Vida sana
+VS-R04,Riesgo de gestión,Dirección de proyectos,Amenaza,1,1,1,1,Directo,Media,0.50,Alto,Moderado,Bajo,Bajo,0.40,0.20,0.10,0.10,0.20,0.10,0.05,0.05,0.35,Alta,Vida sana
+VS-R05,Riesgo técnico,Rendimiento y fiabilidad,Oportunidad,,,,1,Indirecto,Alta,0.70,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.28,0.14,Moderada,Vida sana
+VS-R06,Riesgo técnico,Tecnología,Amenaza,,1,1,,Indirecto,Media,0.50,,Moderado,Alto,,0.00,0.20,0.40,0.00,0.00,0.10,0.20,0.00,0.20,Alta,Vida sana
+VS-R07,Riesgo técnico,Seguridad,Oportunidad,1,1,,1,Indirecto,Alta,0.70,Bajo,Bajo,,Alto,0.10,0.10,0.00,0.40,0.07,0.07,0.00,0.28,0.28,Alta,Vida sana
+VS-R08,Riesgo de gestión,Dotación de recursos,Oportunidad,1,1,1,,Indirecto,Media,0.50,Bajo,Bajo,Moderado,,0.10,0.10,0.20,0.00,0.05,0.05,0.10,0.00,0.15,Moderada,Vida sana
+VS-R09,Riesgo comercial,Términos y condiciones,Amenaza,,,1,1,Directo,Baja,0.30,,,Moderado,Alto,0.00,0.00,0.20,0.40,0.00,0.00,0.06,0.12,0.09,Moderada,Vida sana
+VS-R10,Riesgo técnico,Tecnología,Oportunidad,,,1,1,Directo,Media,0.50,,,Bajo,Alto,0.00,0.00,0.10,0.40,0.00,0.00,0.05,0.20,0.13,Moderada,Vida sana
+VS-R11,Riesgo comercial,Contratos y proveedores,Oportunidad,,1,1,,Directo,Media,0.50,,Bajo,Bajo,,0.00,0.10,0.10,0.00,0.00,0.05,0.05,0.00,0.08,Moderada,Vida sana
+VS-R12,Riesgo técnico,Procesos técnicos,Oportunidad,,,,1,Directo,Media,0.50,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.20,0.10,Moderada,Vida sana
+VS-R13,Riesgo técnico,Interfaces técnicas,Amenaza,,,,1,Indirecto,Baja,0.30,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.06,0.03,Baja,Vida sana
+VS-R14,Riesgo técnico,Estabilidad de los usuarios,Amenaza,,,,1,Directo,Alta,0.70,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.07,0.04,Baja,Vida sana
+VS-R15,Riesgo técnico,Estabilidad de los usuarios,Amenaza,,,,1,Directo,Media,0.50,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.05,0.03,Baja,Vida sana
+VS-R16,Riesgo técnico,Interfaces técnicas,Oportunidad,,,,1,Directo,Media,0.50,,,,Muy bajo,0.00,0.00,0.00,0.05,0.00,0.00,0.00,0.03,0.01,Baja,Vida sana
+VS-R17,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Indirecto,Muy baja,0.10,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.02,0.01,Baja,Vida sana
+VS-R18,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Muy bajo,0.00,0.00,0.00,0.05,0.00,0.00,0.00,0.03,0.02,Baja,Vida sana
+VS-R19,Riesgo técnico,Procesos técnicos,Oportunidad,1,1,,1,Indirecto,Muy alta,0.90,Muy bajo,Bajo,,Bajo,0.05,0.10,0.00,0.10,0.05,0.09,0.00,0.09,0.18,Alta,Vida sana
+VS-R20,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Indirecto,Baja,0.30,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.06,0.03,Baja,Vida sana
+VS-R21,Riesgo técnico,Seguridad,Oportunidad,,,,1,Directo,Media,0.50,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.10,0.05,Baja,Vida sana
+VS-R22,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Directo,Media,0.50,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.05,0.03,Baja,Vida sana
+VS-R23,Riesgo técnico,Procesos técnicos,Oportunidad,1,1,1,1,Directo,Baja,0.30,Muy bajo,Bajo,Bajo,Moderado,0.05,0.10,0.10,0.20,0.01,0.03,0.03,0.06,0.09,Moderada,Vida sana
+VS-R24,Riesgo técnico,Procesos técnicos,Oportunidad,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.07,Moderada,Vida sana
+VS-R25,Riesgo de gestión,Capacitación,Oportunidad,,1,1,,Directo,Media,0.50,,Muy bajo,Bajo,,0.00,0.05,0.10,0.00,0.00,0.03,0.05,0.00,0.05,Baja,Vida sana
+VS-R26,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.07,Moderada,Vida sana
+VS-R27,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.28,0.14,Moderada,Vida sana
+VS-R28,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.07,Moderada,Vida sana
+VS-R29,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Directo,Baja,0.30,,,,Muy alto,0.00,0.00,0.00,0.80,0.00,0.00,0.00,0.24,0.12,Moderada,Vida sana
+VS-R30,Riesgo técnico,Procesos técnicos,Amenaza,,,,1,Directo,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.07,Moderada,Vida sana
+VS-R31,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Directo,Baja,0.30,,,,Alto,0.00,0.00,0.00,0.40,0.00,0.00,0.00,0.12,0.06,Moderada,Vida sana
+VS-R32,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Indirecto,Media,0.50,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.10,0.05,Baja,Vida sana
+VS-R33,Riesgo comercial,Estabilidad de los clientes,Amenaza,,,,1,Indirecto,Alta,0.70,,,,Moderado,0.00,0.00,0.00,0.20,0.00,0.00,0.00,0.14,0.07,Moderada,Vida sana
+VS-R34,Riesgo técnico,Interfaces técnicas,Oportunidad,,,,1,Directo,Alta,0.70,,,,Bajo,0.00,0.00,0.00,0.10,0.00,0.00,0.00,0.07,0.04,Baja,Vida sana
+VS-R35,Riesgo técnico,Interfaces técnicas,Oportunidad,1,1,1,1,Directo,Muy alta,0.90,Bajo,Bajo,Muy bajo,Moderado,0.10,0.10,0.05,0.20,0.09,0.09,0.05,0.18,0.29,Alta,Vida sana
+VS-R36,Riesgo comercial,Estabilidad de los clientes,Oportunidad,1,1,1,1,Directo,Alta,0.70,Bajo,Bajo,Muy bajo,Moderado,0.10,0.10,0.05,0.20,0.07,0.07,0.03,0.14,0.23,Alta,Vida sana
+VS-R37,Riesgo de gestión,Dotación de recursos,Oportunidad,1,1,1,1,Directo,Baja,0.30,Moderado,Bajo,Bajo,Muy bajo,0.20,0.10,0.10,0.05,0.06,0.03,0.03,0.01,0.11,Moderada,Vida sana
